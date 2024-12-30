@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { FaStar } from 'react-icons/fa'
 import { FaRegStar } from "react-icons/fa"
 import "../stars/style.css"
 import frases from "../../data/frases.json"
