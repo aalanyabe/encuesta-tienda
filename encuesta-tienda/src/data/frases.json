@@ -1,0 +1,16 @@
+{
+    "descriptionScore": [
+        "Muy Malo",
+        "Malo",
+        "Regular",
+        "Bueno",
+        "Excelente"
+    ],
+    "mensaje": [
+        "Oh, no fue lo mejor. 😔 ¿Cómo podemos mejorar?",
+        "Lamentamos no haber cumplido. 😕 ¿Qué podemos hacer mejor?",
+        "¡Gracias por tu opinión! 🙂 ¿En qué podemos mejorar?",
+        "¡Qué bien! 😄 ¿Qué más podemos hacer para mejorar?",
+        "¡Genial! 🎉 ¡Gracias por confiar en nosotros!"
+    ]
+}

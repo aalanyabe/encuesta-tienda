@@ -1,0 +1,194 @@
+.active {
+    height: 24px;
+    width: 37px;
+    color: #FF00C8;
+    background: #fab9e7;
+    border-radius: 6px;
+    padding: 15px 10px;
+
+}
+.inactive-hover{
+    height: 24px;
+    width: 37px;
+    color: #897F7FA6;;
+    background-color: rgba(120, 117, 117, 0.646);
+    border-radius: 6px;
+    padding: 15px 10px;
+}
+
+.inactive {
+    height: 24px;
+    width: 37px;
+    color: #897F7FA6;
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px 10px;
+}
+.frame-global {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-logo {
+    height: 50px;
+    width: 200px;
+    padding: 5px;
+}
+
+.image-logo .logo-transparente {
+    height: 50px;
+    /* left: 0; */
+    object-fit: cover;
+    /* position: fixed; */
+    top: 0;
+    width: 200px;
+    
+}
+.frame {
+    align-items: center;
+    background: linear-gradient(rgba(7, 0, 0, 0.51), rgba(7, 0, 0, 0.51)), url("https://res.cloudinary.com/dswfd3z0p/image/upload/v1732076664/fondo_imagen_akafmo.png") ;
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 13px;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    margin-left: -0.50px;
+    margin-right: -0.50px;
+    padding: 40px 82px;
+    position: relative;
+    width: 600px;
+    flex-direction: column;
+}
+
+.formulario {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    position: relative;
+}
+.pregunta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.formulario p {
+    color: #ffffff;
+    font-family: "Urbanist-Bold", Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+    width: 566px;
+}
+
+.formulario .frame-star {
+    /* align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 10px;
+    position: relative; */
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: center;
+    padding: 3px;
+    position: relative;
+    width: 85px;
+}
+
+.formulario .starclasifr-instance {
+    flex: 0 0 auto !important;
+}
+.puntuacion {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    width: 85px;
+}
+
+.mensaje {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: "Urbanist", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.label {
+    height: 19px;
+    width: 69px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: "Urbanist", sans-serif;
+}
+
+.formulario .input-comentario {
+    align-items: flex-start;
+    background-color: #ffffff;
+    font-family:"Urbanist", sans-serif ;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    width: 508px;
+    border: 25px;
+    text-align: top;
+}
+
+.input-comentario:focus{
+    outline: none;
+   
+    /* border: 2px solid #ea85dc */
+}
+
+
+button {
+    height: 48px;
+    width: 160px;
+    background-color: #FF00C8;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: "Urbanist", serif;
+}
+
+
+.gracias-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gracias{
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: "Urbanist", sans-serif;
+}
+.icono-gracias-form{
+    width: 50px;
+    height: 60px;
+    
+}
