@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/updateFeedback"
+  to = "/.netlify/functions/api_service"  # Redirige las solicitudes de esta URL a la función
+  status = 200

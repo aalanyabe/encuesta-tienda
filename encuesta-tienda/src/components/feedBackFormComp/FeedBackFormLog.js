@@ -8,10 +8,11 @@ const FeedBackFormLog = () => {
     const [searParams] = useSearchParams()
     const idTicket = searParams.get('idTicket')
 
+
     const handlerSubmit = async ({rating,comments}) => {
         try {
             // e.preventDefault()
-            const response = await fetch('http://127.0.0.1:8080/api/submit', {
+            const response = await fetch('https://encuestatiendasifrah.netlify.app/api/updateFeedback', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
