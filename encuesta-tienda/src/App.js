@@ -7,8 +7,10 @@ function App() {
       <div className='desktop-web'>
         <header />
         <Routes>
-          <Route path='/survey' element={<FeedBackFormLog/>}></Route>
+          {/* <Route path='/survey' element={<FeedBackFormLog/>}></Route> */}
+          <Route path='/' element={<FeedBackFormLog/>}></Route>
         </Routes>
+
       </div>
     </BrowserRouter>
   );
