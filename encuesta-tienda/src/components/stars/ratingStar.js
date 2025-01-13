@@ -3,6 +3,9 @@ import { FaRegStar } from "react-icons/fa"
 import "../stars/style.css"
 import frases from "../../data/frases.json"
 import { useSearchParams } from 'react-router-dom'
+
+import BeatLoader from 'react-spinners/BeatLoader'
+
 const Frame = ({ nOfStar = 5, enviar }) => {
 
     const [searchParams, setSearchParams] = useSearchParams()
@@ -13,8 +16,7 @@ const Frame = ({ nOfStar = 5, enviar }) => {
     const [mensaje, setMensaje] = useState("ツ")
     const [comments, setComments] = useState("")
     const [isDiv1Visible, setIsDiv1Visible] = useState(true)
-
-
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         if (initialScore > 0) {
@@ -41,10 +43,22 @@ const Frame = ({ nOfStar = 5, enviar }) => {
     console.log(frases.mensaje[0])
 
 
-    const toggleDivs = () => {
+    const toggleDivs = async (e) => {
+        e.preventDefault()
+        setLoading(true)
 
-        setIsDiv1Visible(!isDiv1Visible)
+        try {
+            await enviar({ rating, comments })
+            setIsDiv1Visible(!isDiv1Visible)
+
+        } catch (e) {
+            console.log("error al enviar respuesta: ", e)
+        } finally {
+            setLoading(false)
+        }
+
         enviar({ rating, comments })
+        setIsDiv1Visible(!isDiv1Visible)
     };
 
 
@@ -58,10 +72,16 @@ const Frame = ({ nOfStar = 5, enviar }) => {
                 />
             </div>
             <div className='frame'>
-                {isDiv1Visible ? (
+                {isDiv1Visible ? (loading ? <BeatLoader
+                    color="#ff00c8"
+                    loading
+                    margin={1}
+                    size={15}
+                /> : (
+
                     <div id='formulario' className='formulario'>
                         {/* <p>¿Cómo calificaría el apoyo que recibió?</p> */}
-                        <div className='pregunta'><p>¿Cómo calificaría el apoyo que recibió?</p></div>
+                        <div className='pregunta'><p>¿¿Cómo calificarías la atención recibida?</p></div>
                         <div className='frame-star'>
                             {
                                 [...Array(nOfStar)].map((_, index) => {
@@ -97,7 +117,7 @@ const Frame = ({ nOfStar = 5, enviar }) => {
                         <div>
                             <button onClick={toggleDivs} >Enviar</button>
                         </div>
-                    </div>) : null}
+                    </div>)) : null}
 
                 {!isDiv1Visible ? (
                     <div id='gracias' className='gracias-div' >

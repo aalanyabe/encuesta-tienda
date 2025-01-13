@@ -1,6 +1,6 @@
-// import React, { useState } from 'react'
 import { useSearchParams } from "react-router-dom"
 import Frame from '../stars/ratingStar'
+
 
 
 
@@ -13,12 +13,11 @@ const FeedBackFormLog = () => {
     const column_idClasi = searParams.get('column_idClasi')
     const column_idComm = searParams.get('column_idComm')
 
-    // const [loading,setLoading] = useState(false)
+
 
    
 
     const handlerSubmit = async ({ rating, comments }) => {
-        // setLoading(true)
 
         try {
 
@@ -89,15 +88,13 @@ const FeedBackFormLog = () => {
             console.log('Error al enviar feedback:', err)
 
         } 
-        // finally{
-        //     setLoading(true)
-        // }
-
+        
     }
 
     return (
         <div>
             <Frame enviar={handlerSubmit}></Frame>
+
         </div>
     )
 
