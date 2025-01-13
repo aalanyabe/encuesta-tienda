@@ -81,7 +81,7 @@ const Frame = ({ nOfStar = 5, enviar }) => {
 
                     <div id='formulario' className='formulario'>
                         {/* <p>¿Cómo calificaría el apoyo que recibió?</p> */}
-                        <div className='pregunta'><p>¿¿Cómo calificarías la atención recibida?</p></div>
+                        <div className='pregunta'><p className='pregunta-frase'>¿Cómo calificarías la atención recibida?</p></div>
                         <div className='frame-star'>
                             {
                                 [...Array(nOfStar)].map((_, index) => {

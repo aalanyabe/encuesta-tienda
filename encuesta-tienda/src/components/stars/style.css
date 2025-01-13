@@ -50,7 +50,7 @@
     background: linear-gradient(rgba(7, 0, 0, 0.51), rgba(7, 0, 0, 0.51)), url("https://res.cloudinary.com/dswfd3z0p/image/upload/v1732076664/fondo_imagen_akafmo.png") ;
     background-position: 50% 50%;
     background-size: cover;
-    border-radius: 13px;
+    border-radius: 8px;
     display: flex;
     flex: 0 0 auto;
     gap: 10px;
@@ -144,7 +144,7 @@
     align-items: flex-start;
     background-color: #ffffff;
     font-family:"Urbanist", sans-serif ;
-    border-radius: 15px;
+    border-radius: 4px;
     display: flex;
     gap: 10px;
     height: 100px;
@@ -154,6 +154,7 @@
     width: 508px;
     border: 25px;
     text-align: top;
+    background-color: #e0cedc;
 }
 
 .input-comentario:focus{
@@ -191,4 +192,9 @@ button {
     width: 50px;
     height: 60px;
     
+}
+.pregunta .pregunta-frase{
+    color: #f1daeb;
+    font-family: "Urbanist", sans-serif;
+    font-size: 24px;
 }
