@@ -22,8 +22,7 @@ const FeedBackFormLog = () => {
         try {
 
             console.log("enviando respuesta")
-            // const access_token = 'eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjE4MDk4NjgyNSwiYWFpIjoxMSwidWlkIjozMDQ2ODAyNywiaWFkIjoiMjAyMi0wOS0xNFQyMjoxODoxOS4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MTE3MTIwMjYsInJnbiI6InVzZTEifQ.TU91f8lcu2mspQDy-BHlOuXzgZt3RQTuGMOp6GDh4N8'
-            // let url = 'https://api.monday.com/v2'
+            
 
             let url = process.env.REACT_APP_URL
             let access_token = process.env.REACT_APP_ACCESS_TOKEN
