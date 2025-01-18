@@ -2,8 +2,6 @@ import { useSearchParams } from "react-router-dom"
 import Frame from '../stars/ratingStar'
 
 
-
-
 const FeedBackFormLog = () => {
 
 
@@ -13,9 +11,6 @@ const FeedBackFormLog = () => {
     const column_idClasi = searParams.get('column_idClasi')
     const column_idComm = searParams.get('column_idComm')
 
-
-
-   
 
     const handlerSubmit = async ({ rating, comments }) => {
 
@@ -33,8 +28,7 @@ const FeedBackFormLog = () => {
             
             let query_clas = `mutation {change_multiple_column_values(item_id:${idTicket}, board_id:${boardId}, column_values: "{\\"${column_idClasi}\\" : {\\"rating\\" : ${rating}}}") {id}}`
             
-            // console.log("el query es: ", query_clas)
-
+    
             let query_comments = `mutation {change_multiple_column_values(item_id:${idTicket}, board_id:${boardId}, column_values: "{\\"${column_idComm}\\" : \\"${comments}\\"}"){id}}`
 
      
@@ -52,7 +46,7 @@ const FeedBackFormLog = () => {
                 const data = await response_score.json();
                 console.log('Respuesta exitosa:', data);
                 // alert("Gracias por el score");
-                console.log("Gracias por el score")
+                console.log("Gracias por el score :)")
             } else {
                 // Maneja el caso en el que la respuesta no sea exitosa
                 console.error('Error en la solicitud:', response_score.status, response_score.statusText);
