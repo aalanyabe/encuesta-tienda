@@ -1,16 +1,13 @@
 import { useSearchParams } from "react-router-dom"
 import Frame from '../stars/ratingStar'
 
-
 const FeedBackFormLog = () => {
-
 
     const [searParams] = useSearchParams()
     const idTicket = searParams.get('idTicket')
     const boardId = searParams.get('idBoard')
     const column_idClasi = searParams.get('column_idClasi')
     const column_idComm = searParams.get('column_idComm')
-
 
     const handlerSubmit = async ({ rating, comments }) => {
 

@@ -111,7 +111,7 @@ const Frame = ({ nOfStar = 5, enviar }) => {
                         <div className='div-mensaje' >
                             <h2 className='mensaje'>{mensaje}</h2>
                         </div>
-                        <div>
+                        <div className='box-comentario'>
                             <textarea className='input-comentario' value={comments} placeholder='La atención me pareció...' onChange={(e) => setComments(e.target.value)}></textarea>
                         </div>
                         <div>

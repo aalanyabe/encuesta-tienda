@@ -7,10 +7,12 @@
     padding: 15px 10px;
 
 }
-.inactive-hover{
+
+.inactive-hover {
     height: 24px;
     width: 37px;
-    color: #897F7FA6;;
+    color: #897F7FA6;
+    ;
     background-color: rgba(120, 117, 117, 0.646);
     border-radius: 6px;
     padding: 15px 10px;
@@ -24,6 +26,7 @@
     border-radius: 6px;
     padding: 15px 10px;
 }
+
 .frame-global {
     display: flex;
     align-items: center;
@@ -43,11 +46,12 @@
     /* position: fixed; */
     top: 0;
     width: 200px;
-    
+
 }
+
 .frame {
     align-items: center;
-    background: linear-gradient(rgba(7, 0, 0, 0.51), rgba(7, 0, 0, 0.51)), url("https://res.cloudinary.com/dswfd3z0p/image/upload/v1732076664/fondo_imagen_akafmo.png") ;
+    background: linear-gradient(rgba(7, 0, 6, 0.805), rgba(7, 0, 7, 0.919)), url("https://res.cloudinary.com/diqstznvt/image/upload/v1751256294/5902c240-bb2a-4e65-8142-e832bddf0fe5.png");
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 8px;
@@ -57,10 +61,21 @@
     justify-content: center;
     margin-left: -0.50px;
     margin-right: -0.50px;
-    padding: 40px 82px;
+    /* padding: 40px 82px; */
+    padding: 30px 20px;
+
     position: relative;
-    width: 600px;
+    /* width: 600px; */
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     flex-direction: column;
+
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.539);
+
 }
 
 .formulario {
@@ -70,8 +85,10 @@
     gap: 15px;
     justify-content: center;
     position: relative;
+    width: 100%;
 }
-.pregunta{
+
+.pregunta {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +107,7 @@
     margin-bottom: 15px;
     position: relative;
     text-align: center;
-    width: 566px;
+    width: 100%;
 }
 
 .formulario .frame-star {
@@ -114,6 +131,7 @@
 .formulario .starclasifr-instance {
     flex: 0 0 auto !important;
 }
+
 .puntuacion {
     align-items: center;
     display: flex;
@@ -132,6 +150,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .label {
     height: 19px;
     width: 69px;
@@ -140,26 +159,40 @@
     font-family: "Urbanist", sans-serif;
 }
 
+.box-comentario {
+    width: 100%;
+    max-width: 100%;
+}
+
 .formulario .input-comentario {
     align-items: flex-start;
     background-color: #ffffff;
-    font-family:"Urbanist", sans-serif ;
+    font-family: "Urbanist", sans-serif;
     border-radius: 4px;
     display: flex;
     gap: 10px;
     height: 100px;
     justify-content: center;
-    padding: 20px;
+    padding: 12px;
     position: relative;
-    width: 508px;
+    /* width: 508px; */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
     border: 25px;
     text-align: top;
     background-color: #e0cedc;
+    resize: none;
 }
 
-.input-comentario:focus{
+.formulario{
+    width: 100%;
+}
+
+.input-comentario:focus {
     outline: none;
-   
+
     /* border: 2px solid #ea85dc */
 }
 
@@ -176,25 +209,100 @@ button {
 }
 
 
-.gracias-div{
+.gracias-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.gracias{
+
+.gracias {
     color: #FFFFFF;
     margin-top: 10px;
     margin-bottom: 5px;
     font-family: "Urbanist", sans-serif;
 }
-.icono-gracias-form{
+
+.icono-gracias-form {
     width: 50px;
     height: 60px;
-    
+
 }
-.pregunta .pregunta-frase{
+
+.pregunta .pregunta-frase {
     color: #f1daeb;
     font-family: "Urbanist", sans-serif;
     font-size: 24px;
+}
+
+
+
+@media (max-width: 768px) {
+    .frame {
+        width: 100%;
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    .formulario{
+        width: 100%;
+    }
+
+    .formulario p,
+    .pregunta .pregunta-frase {
+        font-size: 18px;
+        /* width: auto; */
+
+    }
+
+    .input-comentario {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .frame-star {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        /* <-- mantiene estrellas en fila */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .puntuacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .image-logo .logo-transparente {
+        width: 150px;
+        height: auto;
+    }
+
+    .mensaje,
+    .gracias {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+/* Agrega esto en index.css */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #dabfd1;
+    /* igual que en style.css si quieres consistencia */
 }
